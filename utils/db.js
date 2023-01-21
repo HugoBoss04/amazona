@@ -3,6 +3,7 @@ import mongoose from 'mongoose'
 const connection = {}
 
 async function connect() {
+  mongoose.set('strictQuery', false)
   if (connection.isConnected) {
     console.log('already connected')
     return
